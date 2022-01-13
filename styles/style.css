@@ -8,12 +8,15 @@ body{
 }
 main{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 .container{
     background: #FFFFFF;
     width: 870px;
     padding: 30px;
+    border-radius: 5px;
+    margin-top:21px;
 }
 .top-players{
     margin-bottom: 30px;
@@ -75,4 +78,51 @@ hr{
     text-decoration: none;
     color: #562EFF;
     font-size: 16px;
+}
+/*---------------------
+    courses style
+----------------------- */
+.couses{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 24px;
+}
+
+.course .course-banner img{
+    width: 224px;
+    height: 104px;
+}
+.course-author{
+    color: red;
+}
+.course-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.fa-star.filled{
+    color: #FFC014;
+}
+.fa-star{
+    font-size: 12px;
+}
+.fa-star.empty{
+    color: #d3d3d3;
+}
+.couse-duration{
+    border-radius: 6px;
+    background-color: rgb(248, 178, 178);
+    color: red;
+    
+}
+/*-------------------
+    media queries 
+---------------------*/
+@media only screen and (max-width: 688px){
+    .container{
+        width: 100%;
+    }
+    .players, .blogs, .couses{
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
